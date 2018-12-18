@@ -1,0 +1,8 @@
+{
+  "name": "useraccounts-react-semantic",
+  "version": "1.0.0",
+  "description": "useraccounts react semantic integration",
+  "main": "index.js",
+  "author": "Roy Giladi",
+  "license": "ISC"
+}
