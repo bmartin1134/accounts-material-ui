@@ -1,7 +1,17 @@
 import React from 'react'
-import { Form, Radio, Label } from 'semantic-ui-react'
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
 class RadioField extends React.Component {
+  state = {
+    value: '',
+  };
 
   componentDidMount () {
     const {
@@ -26,35 +36,36 @@ class RadioField extends React.Component {
       options,
       required,
       error,
-      defaults
+      defaults,
+      classes
     } = this.props
 
     return (
-      <Form.Field required={required !== false} error={error ? true : false}>
+      <FormControl required={required ? true : false} error={error ? true : false}>
 
-        {defaults.showLabels && <label>{displayName}</label>}
-
-        <Form.Group grouped>
-
+        {defaults.showLabels && <FormLabel>{displayName}</FormLabel>}
+        <RadioGroup
+            aria-label={displayName}
+            name="{displayName}1"
+            className={classes.group}
+            value={this.state.value}
+            onChange={this.handleChange}
+          >
           {options.map((option, i) => (
-
-            <Form.Field key={i}>
-
-              <Radio
-                label={option.text}
-                value={option.value}
-                checked={values[_id] === option.value}
-                onChange={this.handleChange}
+            <FormControlLabel
+              id={i}
+              value={option.value}
+              control={<Radio />}
+              label={option.text}
+              checked={values[_id] === option.value}
               />
 
-            </Form.Field>
           ))}
+          </RadioGroup>
+          {error && <FormHelperText>{error.errStr}</FormHelperText>}
 
-          {error && <Label basic color='red' pointing>{error.errStr}</Label>}
+        </FormControl>
 
-        </Form.Group>
-        
-      </Form.Field>
     )
   }
 
@@ -63,7 +74,7 @@ class RadioField extends React.Component {
       _id,
       onChange
     } = this.props
-
+    this.setState({ value: event.target.value });
     onChange(value, _id)
   }
 }
@@ -72,4 +83,4 @@ RadioField.defaultProps = {
   type: 'text'
 }
 
-export default RadioField
+export default withStyles(styles)(RadioField)
