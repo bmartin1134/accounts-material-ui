@@ -1,7 +1,41 @@
-import React from 'react'
-import { Form, Input, Label } from 'semantic-ui-react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { withStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import Mail from '@material-ui/icons/Mail';
+import Lock from '@material-ui/icons/Lock';
+import LockOpen from '@material-ui/icons/LockOpen';
+import Info from '@material-ui/icons/Info';
 
-const InputField = (fieldObj) => {
+const styles = theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  formControl: {
+    margin: theme.spacing.unit,
+  },
+});
+
+class InputField extends React.Component {
+
+  state = {
+    value: '',
+  };
+
+  componentDidMount() {
+    this.forceUpdate();
+  }
+
+  handleChange = event => {
+    this.setState({ name: event.target.value });
+  };
+
+  render() {
+
+
   const {
     _id,
     displayName,
@@ -12,30 +46,86 @@ const InputField = (fieldObj) => {
     icon,
     focusInput,
     error,
-    defaults
-  } = fieldObj
+    defaults,
+    classes
+  } = this.props;
 
   return (
-    <Form.Field required={required !== false} error={!!error}>
-
-      {defaults.showLabels && <label>{displayName}</label>}
-
-      <Input
-        autoFocus={focusInput}
-        icon={icon || iconMapper[_id] || null}
-        iconPosition='left'
-        placeholder={defaults.showPlaceholders ? placeholder : ''}
+    <TextField id={_id} label={displayName}
         type={type}
-        error={Boolean(error)}
+        placeholder={defaults.showPlaceholders ? placeholder : ''}
+        required={Boolean(required) ? "true" : null}
+
+        autoFocus={focusInput}
+        error={Boolean(error) ? "true" : null}
+        helperText={error.errStr}
+
+        margin="normal"
+          InputLabelProps={{
+          shrink: true,
+        }}
         onChange={(e) => onChange(e, _id)}
         onBlur={(e) => onChange(e, _id)}
-      />
 
-      {error && <Label basic color='red' pointing>{error.errStr}</Label>}
+        style={{ margin: 8 }}
 
-    </Form.Field>
+        InputProps={{
+            startAdornment: (
+                getIcon(icon)
+            ),
+          }}
+
+        />
+
   )
 }
+
+function getIcon(icon) {
+  if (icon === "user") {
+    return (
+      <InputAdornment position="start">
+        <AccountCircle />
+      </InputAdornment>
+    )
+  }
+  if (icon === "mail") {
+    return (
+      <InputAdornment position="start">
+        <Mail />
+      </InputAdornment>
+    )
+  }
+  if (icon === "password") {
+    return (
+      <InputAdornment position="start">
+        <Lock />
+      </InputAdornment>
+    )
+  }
+  if (icon === "confirmPassword") {
+    return (
+      <InputAdornment position="start">
+        <LockOpen />
+      </InputAdornment>
+    )
+  }
+  if (icon === "currentPassword") {
+    return (
+      <InputAdornment position="start">
+        <LockOpen />
+      </InputAdornment>
+    )
+  }
+  if (icon === "fullName") {
+    return (
+      <InputAdornment position="start">
+        <Info />
+      </InputAdornment>
+    )
+  }
+}
+
+
 
 const iconMapper = {
   username: 'user',
