@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 const styles = theme => ({
   button: {
@@ -56,7 +58,7 @@ function Submit(props)  {
         : social
 
     return (
-      <Button color="primary" onClick={onClick} classNames(social-btn, {color})>
+      <Button color="primary" onClick={onClick} className={classNames('social-btn', {color})}>
         {icon}
         Continue with {capitalize(social)}
       </Button>
@@ -66,12 +68,12 @@ function Submit(props)  {
     <Button
       variant="contained"
       className={className}
-      {disabled ? "disabled" : null}
+      disabled={disabled ? 'true' : null}
       onClick={onClick}
       >
         {text}
       </Button>
-
+    )
 }
 
 function capitalize (s) {

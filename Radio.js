@@ -83,4 +83,4 @@ RadioField.defaultProps = {
   type: 'text'
 }
 
-export default withStyles(styles)(RadioField)
+export default RadioField

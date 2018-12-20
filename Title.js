@@ -11,7 +11,7 @@ const styles = {
 };
 
 function Title(props) {
-  const { classes, text } = props;)
+  const { classes, text } = props;
 
   return (
 

@@ -6,7 +6,7 @@ import SelectField from './Select'
 import SubmitField from './Submit'
 import TitleField  from './Title'
 import ErrorsField from './Errors'
-import { Form as FormField }    from 'semantic-ui-react'
+import { FormControl as FormField } from '@material-ui/core/FormControl';
 
 export {
   FormField,

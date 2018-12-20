@@ -8,6 +8,7 @@ import Mail from '@material-ui/icons/Mail';
 import Lock from '@material-ui/icons/Lock';
 import LockOpen from '@material-ui/icons/LockOpen';
 import Info from '@material-ui/icons/Info';
+import SvgIcon from '@material-ui/core/SvgIcon';
 
 const styles = theme => ({
   container: {
@@ -78,6 +79,7 @@ class InputField extends React.Component {
         />
 
   )
+}
 }
 
 function getIcon(icon) {
