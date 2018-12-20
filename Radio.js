@@ -8,6 +8,16 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
+const styles = theme => ({
+  formControl: {
+
+      margin: theme.spacing.unit,
+  },
+  group: {
+    margin: theme.spacing.unit,
+  },
+});
+
 class RadioField extends React.Component {
   state = {
     value: '',
@@ -41,10 +51,10 @@ class RadioField extends React.Component {
     } = this.props
 
     return (
-      <FormControl required={required ? true : false} error={error ? true : false}>
 
-        {defaults.showLabels && <FormLabel>{displayName}</FormLabel>}
         <RadioGroup
+            label={defaults.showLabels ? displayName : ''}
+            row={true}
             aria-label={displayName}
             name="{displayName}1"
             className={classes.group}
@@ -54,6 +64,7 @@ class RadioField extends React.Component {
           {options.map((option, i) => (
             <FormControlLabel
               id={i}
+               key={i}
               value={option.value}
               control={<Radio />}
               label={option.text}
@@ -62,9 +73,8 @@ class RadioField extends React.Component {
 
           ))}
           </RadioGroup>
-          {error && <FormHelperText>{error.errStr}</FormHelperText>}
 
-        </FormControl>
+
 
     )
   }
@@ -83,4 +93,4 @@ RadioField.defaultProps = {
   type: 'text'
 }
 
-export default RadioField
+export default withStyles(styles)(RadioField);

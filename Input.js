@@ -9,6 +9,7 @@ import Lock from '@material-ui/icons/Lock';
 import LockOpen from '@material-ui/icons/LockOpen';
 import Info from '@material-ui/icons/Info';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 const styles = theme => ({
   container: {
@@ -52,14 +53,14 @@ class InputField extends React.Component {
   } = this.props;
 
   return (
-    <TextField id={_id} label={displayName}
+    <TextField id={_id} label={defaults.showLabels ? displayName : ''}
         type={type}
         placeholder={defaults.showPlaceholders ? placeholder : ''}
-        required={Boolean(required) ? "true" : null}
+        required={required !== false}
 
         autoFocus={focusInput}
-        error={Boolean(error) ? "true" : null}
-        helperText={error.errStr}
+        error={!!error}
+        helperText={error ? error.errStr : null}
 
         margin="normal"
           InputLabelProps={{
@@ -72,10 +73,10 @@ class InputField extends React.Component {
 
         InputProps={{
             startAdornment: (
-                getIcon(icon)
+                getIcon(iconMapper[_id])
             ),
           }}
-
+          fullWidth
         />
 
   )
@@ -97,28 +98,28 @@ function getIcon(icon) {
       </InputAdornment>
     )
   }
-  if (icon === "password") {
+  if (icon === "lock") {
     return (
       <InputAdornment position="start">
         <Lock />
       </InputAdornment>
     )
   }
-  if (icon === "confirmPassword") {
+  if (icon === "unlock alternate") {
     return (
       <InputAdornment position="start">
         <LockOpen />
       </InputAdornment>
     )
   }
-  if (icon === "currentPassword") {
+  if (icon === "unlock alternate") {
     return (
       <InputAdornment position="start">
         <LockOpen />
       </InputAdornment>
     )
   }
-  if (icon === "fullName") {
+  if (icon === "info") {
     return (
       <InputAdornment position="start">
         <Info />

@@ -7,6 +7,8 @@ const styles = {
   root: {
     width: '100%',
     maxWidth: 500,
+    'text-align': 'center',
+    'font-weight': 'bold'
   },
 };
 
@@ -15,9 +17,9 @@ function Title(props) {
 
   return (
 
-    <div className={classes.root}>
-      <Typography variant="h4" gutterBottom>
-          h4. Heading
+    <div>
+      <Typography variant="h5" gutterBottom  className={classes.root}>
+          {text}
       </Typography>
     </div>
   )
