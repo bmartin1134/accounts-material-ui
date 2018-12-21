@@ -60,7 +60,7 @@ class InputField extends React.Component {
         required={required !== false}
 
         autoFocus={focusInput}
-        error={error}
+        error={!!error}
         helperText={error ? error.errStr : null}
 
         margin="normal"
