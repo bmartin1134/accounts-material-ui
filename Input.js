@@ -11,6 +11,7 @@ import Info from '@material-ui/icons/Info';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
+
 const styles = theme => ({
   container: {
     display: 'flex',
@@ -59,7 +60,7 @@ class InputField extends React.Component {
         required={required !== false}
 
         autoFocus={focusInput}
-        error={!!error}
+        error={error}
         helperText={error ? error.errStr : null}
 
         margin="normal"
