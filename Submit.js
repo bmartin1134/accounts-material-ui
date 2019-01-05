@@ -7,7 +7,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 
 const styles = theme => ({
   button: {
-    margin: theme.spacing.unit,
+    marginBottom: theme.spacing.unit,
   },
   leftIcon: {
     marginRight: theme.spacing.unit,
@@ -73,6 +73,7 @@ function Submit(props)  {
       disabled={disabled ? 'true' : null}
       onClick={onClick}
       fullWidth
+      type="submit"
       >
         {text}
       </Button>

@@ -16,9 +16,7 @@ const styles = theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
-  },
-  formControl: {
-    margin: theme.spacing.unit,
+      marginBottom: '1em',
   },
 });
 
@@ -58,6 +56,7 @@ class InputField extends React.Component {
         type={type}
         placeholder={defaults.showPlaceholders ? placeholder : ''}
         required={required !== false}
+        className={classes.container}
 
         autoFocus={focusInput}
         error={!!error}
@@ -70,7 +69,6 @@ class InputField extends React.Component {
         onChange={(e) => onChange(e, _id)}
         onBlur={(e) => onChange(e, _id)}
 
-        style={{ margin: 8 }}
 
         InputProps={{
             startAdornment: (
@@ -140,4 +138,4 @@ const iconMapper = {
   fullName: 'info'
 }
 
-export default InputField
+export default withStyles(styles)(InputField);
