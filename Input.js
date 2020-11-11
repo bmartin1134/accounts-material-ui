@@ -1,6 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -8,7 +6,6 @@ import Mail from '@material-ui/icons/Mail';
 import Lock from '@material-ui/icons/Lock';
 import LockOpen from '@material-ui/icons/LockOpen';
 import Info from '@material-ui/icons/Info';
-import SvgIcon from '@material-ui/core/SvgIcon';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 

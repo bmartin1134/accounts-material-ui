@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
@@ -6,6 +6,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = {
   root: {
     width: '100%',
+    margin: '0 auto',
     maxWidth: 500,
     'text-align': 'center',
     'font-weight': 'bold'

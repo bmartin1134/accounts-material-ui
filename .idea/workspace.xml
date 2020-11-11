@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="574bc890-f7bc-4eb2-9c3f-171eddf72b5f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Errors.js" beforeDir="false" afterPath="$PROJECT_DIR$/Errors.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FormField.js" beforeDir="false" afterPath="$PROJECT_DIR$/FormField.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/Input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Radio.js" beforeDir="false" afterPath="$PROJECT_DIR$/Radio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Select.js" beforeDir="false" afterPath="$PROJECT_DIR$/Select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Submit.js" beforeDir="false" afterPath="$PROJECT_DIR$/Submit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.js" beforeDir="false" afterPath="$PROJECT_DIR$/package.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1k8Mb9k63w2Zq36z2dXyKaCn42N" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="574bc890-f7bc-4eb2-9c3f-171eddf72b5f" name="Default Changelist" comment="" />
+      <created>1605077834233</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605077834233</updated>
+      <workItem from="1605077835435" duration="87000" />
+      <workItem from="1605078257862" duration="329000" />
+      <workItem from="1605079263767" duration="609000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
