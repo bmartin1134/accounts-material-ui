@@ -6,10 +6,10 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 
 const styles = theme => ({
   button: {
-    marginBottom: theme.spacing.unit,
+    marginBottom: theme.spacing(1),
   },
   leftIcon: {
-    marginRight: theme.spacing.unit,
+    marginRight: theme.spacing(1),
   },
   googleSocial: {
     color: theme.palette.getContrastText('#ea4335'),

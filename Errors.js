@@ -5,11 +5,11 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   error: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit*-1,
-    marginTop: theme.spacing.unit,
-    marginBottom:  theme.spacing.unit,
-    padding:  theme.spacing.unit,
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(-1),
+    marginTop: theme.spacing(1),
+    marginBottom:  theme.spacing(1),
+    padding:  theme.spacing(1),
     background: 'lightYellow',
     border: 'brown',
     'text-align': 'center'
